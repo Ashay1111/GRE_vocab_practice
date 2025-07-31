@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRE Vocabulary Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>GRE Vocabulary Mastery</h1>
+        <p>Master essential GRE words</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-number" id="streak-count">0</div>
+            <div class="stat-label">Streak</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number" id="session-count">0</div>
+            <div class="stat-label">Session</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number" id="mastered-count">0</div>
+            <div class="stat-label">Mastered</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number" id="accuracy">0%</div>
+            <div class="stat-label">Accuracy</div>
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn active" data-mode="random">🎲 Random</button>
+        <button class="control-btn" data-mode="difficult">🔥 Difficult</button>
+        <button class="control-btn" data-mode="review">📚 Review</button>
+        <button class="control-btn" id="reset-btn">🔄 Reset</button>
+    </div>
+
+    <div class="flashcard" id="current-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <div class="word" id="current-word">Loading...</div>
+            </div>
+            <div class="card-back">
+                <div class="definition" id="current-definition">Definition will appear here</div>
+                <div class="confidence-buttons">
+                    <button class="confidence-btn easy" data-confidence="easy">😊 Easy</button>
+                    <button class="confidence-btn medium" data-confidence="medium">🤔 Medium</button>
+                    <button class="confidence-btn hard" data-confidence="hard">😰 Hard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn">← Previous</button>
+        <button class="nav-btn" id="flip-btn">Reveal Answer</button>
+        <button class="nav-btn" id="next-btn">Next →</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
